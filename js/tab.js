@@ -14,6 +14,7 @@ var tab = function () {
             this.activeTab = key;
             this.tabs[this.activeTab].classList.add(this.className);
             clock.displayTime(clock.currentTime[key]);
+            clock.setButton();
         }
     };
     this.tabs.forEach((t) => {

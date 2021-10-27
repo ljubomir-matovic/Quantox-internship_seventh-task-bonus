@@ -37,6 +37,16 @@ body {
 .space-mono {
     font-family: "Space Mono", monospace;
 }
+/*Color style*/
+.red {
+    --active-color: var(--red);
+}
+.cyan {
+    --active-color: var(--cyan);
+}
+.purple {
+    --active-color: var(--purple);
+}
 /*Text style*/
 h1,
 h2,
@@ -49,7 +59,7 @@ h4 {
     text-transform: uppercase;
 }
 h2,
-h5 {
+h4 {
     color: var(--dark);
 }
 h1,
@@ -79,34 +89,6 @@ button {
 button:hover {
     cursor: pointer;
     opacity: 0.4;
-}
-.number {
-    position: relative;
-    width: 140px;
-    height: 40px;
-    background-color: var(--light-gray);
-    border-radius: 10px;
-    padding: 16px 27px 16px 16px;
-}
-.arrow {
-    position: absolute;
-    right: 16px;
-    width: 12px;
-    height: 4px;
-}
-.number .arrow {
-    opacity: 0.6;
-}
-.number:hover .arrow {
-    opacity: 1;
-}
-input[type="number"] {
-    appearance: none;
-    font-size: 14px;
-    color: var(--dark-blue);
-    width: 100%;
-    height: 100%;
-    font-family: inherit;
 }
 main {
     border-radius: 50%;
@@ -184,6 +166,7 @@ main {
     h3 {
         font-size: 16px;
         line-height: 16px;
+        letter-spacing: 15px;
     }
     .title {
         font-size: 32px;
