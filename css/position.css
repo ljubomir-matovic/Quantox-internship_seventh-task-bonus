@@ -19,8 +19,7 @@ body {
 .purple {
     --active-color: var(--purple);
 }
-header {
-    margin: 80px 0 109px;
+.container > header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,12 +43,19 @@ header {
     flex-grow: 1;
     border: none;
     border-radius: 26.5px;
+    cursor: pointer;
+}
+.tab:hover {
+    color: var(--white);
 }
 .tab.active {
     background-color: var(--active-color);
     color: var(--dark);
 }
-.progress-ring__circle {
+.tab.active:hover {
+    color: var(--white);
+}
+.progress-ring > circle {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg) translate(0, 0);
     -webkit-transform-origin: 50% 50%;
@@ -60,9 +66,22 @@ header {
     z-index: 10;
     position: absolute;
     top: 50%;
-    right: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
+/*Desktop*/
+@media screen and (min-width: 1000px) {
+    .container > header {
+        margin: 80px 0 109px;
+    }
+}
+/*Tablet*/
+@media screen and (min-width: 600px) and (max-width: 999px) {
+    .container > header {
+        margin: 80px 0 109px;
+    }
+}
+/*Mobile*/
 @media screen and (max-width: 599px) {
     .container > header {
         margin: 32px 0 70px;

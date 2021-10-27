@@ -12,32 +12,36 @@
     />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/position.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <title>Pomodoro app</title>
   </head>
   <body>
     <section class="container kumbh-sans red">
       <header>
-        <section class="title">pomodoro</section>
+        <!--<section class="title">pomodoro</section>-->
+        <section>
+          <img src="./images/logo.svg" alt="logo">
+        </section>
         <section class="tabs-container">
-          <section class="tab">pomodoro</section>
-          <section class="tab">short break</section>
-          <section class="tab">long break</section>
+          <section class="tab" key="0">pomodoro</section>
+          <section class="tab" key="1">short break</section>
+          <section class="tab" key="2">long break</section>
         </section>
       </header>
       <main>
         <section class="outer-circle">
-          <svg id="circle-tablet" class="progress-ring desktop" width="339" height="339">
-            <circle id="circle" class="progress-ring__circle" stroke-width="8" stroke-linecap="round"
+          <svg class="progress-ring desktop" width="339" height="339">
+            <circle id="circle" stroke-width="8" stroke-linecap="round"
               fill="transparent" r="165" cx="169" cy="169"
-              style="stroke-dasharray: 1036.73, 1036.73; stroke-dashoffset: 34.5575;"></circle>
+              style="stroke-dasharray: 1036.73; stroke-dashoffset: 1036.73;"></circle>
           </svg>
-          <svg id="circle-mobile" class="progress-ring mobile" height="248" width="248">
-            <circle id="circle" class="progress-ring__circle" stroke-width="8" stroke-linecap="round" fill="transparent"
+          <svg class="progress-ring mobile" height="248" width="248">
+            <circle id="circle" stroke-width="8" stroke-linecap="round" fill="transparent"
               r="120" cx="124" cy="124"
-              style="stroke-dasharray: 1036.73, 1036.73; stroke-dashoffset: 34.5575;"></circle>
+              style="stroke-dasharray: 1036.73; stroke-dashoffset: 1036.73;"></circle>
           </svg>
           <section class="stopwatch">
-            sgdsg
+            <h1><span class="minutes"></span>:<span class="seconds"></span></h1>
           </section>
         </section>
       </main>
@@ -45,10 +49,13 @@
     </section>
     <!--start pause restart Settings Time (minutes)
     pomodoro short break long break Font Color Apply-->
-    <section class="modal-container" style="display:none;">
+    <section class="modal-container">
       <section class="modal">
-
+        <h2>Settings</h2>
       </section>
     </section>
+    <script src="./js/modal.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/tab.js"></script>
   </body>
 </html>

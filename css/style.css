@@ -125,6 +125,12 @@ main {
 .settings {
     width: 28px;
     height: 28px;
+    cursor: pointer;
+}
+.settings:hover {
+    filter: brightness(500%);
+    transform: scale(1.5);
+    transition: all 0.3s ease-in;
 }
 /*Desktop*/
 @media screen and (min-width: 1000px) {
