@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+    --red: #f87070;
+    --cyan: #70f3f8;
+    --purple: #d881f8;
+    --gray: #d7e0ff;
+    --white: #ffffff;
+    --light-gray: #eff1fa;
+    --dark: #161932;
+    --dark-blue: #1e213f;
+    --text-color: rgba(215, 224, 255, 0.6);
+    --family: "Kumbh Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: var(--family);
+}
+/**Desktop > 1000px
+** 600px < Tablet < 1000px
+** Mobile < 600px
+** XS Mobile < 330px 
+*/
+body {
+    font-size: 12px;
+    color: var(--text-color);
+    background-color: var(--dark-blue);
+}
+/*Font families*/
+.kumbh-sans {
+    --family: "Kumbh Sans", sans-serif;
+}
+.roboto-slab {
+    --family: "Roboto Slab", serif;
+}
+.space-mono {
+    --family: "Space Mono", monospace;
+}
+/*Color style*/
+.red {
+    --active-color: var(--red);
+}
+.cyan {
+    --active-color: var(--cyan);
+}
+.purple {
+    --active-color: var(--purple);
+}
+/*Text style*/
+h1,
+h2,
+h3,
+h4 {
+    font-family: inherit;
+}
+h3,
+h4 {
+    text-transform: uppercase;
+}
+h2,
+h4 {
+    color: var(--dark);
+}
+h1,
+h3 {
+    color: var(--gray);
+}
+h4 {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.title {
+    color: var(--gray);
+    text-align: center;
+}
+
+button {
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 26.5px;
+    border: none;
+    width: 140px;
+    height: 53px;
+    font-size: 16px;
+    font-family: inherit;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #faa4a4;
+}
+main {
+    border-radius: 50%;
+    padding: 22px;
+    background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+    box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+}
+.outer-circle {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    border-radius: 50%;
+    position: relative;
+    padding: 13.5px;
+}
+.settings {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.settings:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all 0.3s ease-in;
+}
+/*Desktop*/
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    h1 {
+        font-size: 100px;
+        line-height: 120px;
+        letter-spacing: -5px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 15px;
+    }
+    h3:hover {
+        color: var(--active-color);
+        cursor: pointer;
+    }
+    .title {
+        font-size: 32px;
+    }
+    main {
+        width: 410px;
+        height: 410px;
+    }
+    .mobile {
+        display: none;
+    }
+    .settings {
+        margin: 63px 0 56px;
+    }
+}
+/*Tablet*/
+@media screen and (min-width: 600px) and (max-width: 999px) {
+    body {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    h1 {
+        font-size: 100px;
+        line-height: 120px;
+        letter-spacing: -5px;
+    }
+    h2 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 15px;
+    }
+    .title {
+        font-size: 32px;
+    }
+    main {
+        width: 410px;
+        height: 410px;
+    }
+    .mobile {
+        display: none;
+    }
+    .settings {
+        margin: 114px 0 103px;
+    }
+}
+/*Mobile*/
+@media screen and (max-width: 599px) {
+    body {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    h1 {
+        font-size: 80px;
+        line-height: 105px;
+        letter-spacing: -5px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    h3 {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 13.125px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    main {
+        width: 300px;
+        height: 300px;
+    }
+    .desktop {
+        display: none;
+    }
+    section.outer-circle {
+        padding: 9.88px;
+    }
+    .container > main {
+        padding: 16px;
+    }
+    .settings {
+        margin: 80px 0 48px;
+    }
+}

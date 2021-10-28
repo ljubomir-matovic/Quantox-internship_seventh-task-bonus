@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.container > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.tabs-container {
+    max-width: 373px;
+    width: 90vw;
+    height: 63px;
+    padding: 7px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--dark);
+    border-radius: 31.5px;
+}
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border: none;
+    border-radius: 26.5px;
+    cursor: pointer;
+}
+.tab:hover {
+    color: var(--white);
+}
+.tab.active {
+    background-color: var(--active-color);
+    color: var(--dark);
+}
+.tab.active:hover {
+    color: var(--white);
+}
+.progress-ring > circle {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg) translate(0, 0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    stroke: var(--active-color);
+}
+.stopwatch {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+/*Desktop*/
+@media screen and (min-width: 1000px) {
+    .container > header {
+        margin: 80px 0 109px;
+    }
+}
+/*Tablet*/
+@media screen and (min-width: 600px) and (max-width: 999px) {
+    .container > header {
+        margin: 80px 0 109px;
+    }
+}
+/*Mobile*/
+@media screen and (max-width: 599px) {
+    .container > header {
+        margin: 32px 0 70px;
+    }
+}
