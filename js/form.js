@@ -25,7 +25,7 @@ var form = function () {
         parent.value = Number(parent.value) - Number(parent.step);
     };
     this.changeFont = (e) => {
-        if (e.pointerId == 0) {
+        if (e.pointerId >= 0) {
             let target = e.target;
             let key = target.getAttribute("data-index");
             this.fonts[this.activeFont].className = "";
@@ -34,7 +34,7 @@ var form = function () {
         }
     };
     this.changeColor = (e) => {
-        if (e.pointerId == 0) {
+        if (e.pointerId >= 0) {
             let target = e.target;
             let key = target.getAttribute("data-index");
             this.colors[this.activeColor].className = "";

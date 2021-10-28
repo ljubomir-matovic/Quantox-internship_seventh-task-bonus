@@ -166,6 +166,10 @@ label {
     .change-color {
         margin-bottom: 40px;
     }
+    label[for] {
+        width: auto;
+        align-self: flex-start;
+    }
 }
 /*Mobile*/
 @media screen and (max-width: 599px) {

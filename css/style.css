@@ -92,7 +92,7 @@ button {
 }
 button:hover {
     cursor: pointer;
-    opacity: 0.4;
+    background-color: #faa4a4;
 }
 main {
     border-radius: 50%;
