@@ -82,4 +82,26 @@ document.querySelector(".settings").addEventListener("click", () => {
         form.numbers[i].value = clock.startTime[i];
     }
     let root = document.querySelector(".container").classList;
+    /*Check current font*/
+    let active = document.querySelector(".change-font label.active");
+    active.className = "";
+    active.children[0].checked = false;
+    active = document.querySelector(
+        `.change-font input[type="radio"][value=${root[1]}]`
+    );
+    active.checked = true;
+    active = active.parentElement;
+    active.className = "active";
+    form.activeFont = Number(active.getAttribute("data-index"));
+    /*Check current color*/
+    active = document.querySelector(".change-color label.active");
+    active.className = "";
+    active.children[0].checked = false;
+    active = document.querySelector(
+        `.change-color input[type="radio"][value=${root[2]}]`
+    );
+    active.checked = true;
+    active = active.parentElement;
+    active.className = "active";
+    form.activeColor = Number(active.getAttribute("data-index"));
 });
