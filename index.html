@@ -31,18 +31,18 @@
       <main>
         <section class="outer-circle">
           <svg class="progress-ring desktop" width="339" height="339">
-            <circle id="circle" stroke-width="8" stroke-linecap="round"
+            <circle stroke-width="8" stroke-linecap="round"
               fill="transparent" r="165" cx="169" cy="169"
               style="stroke-dasharray: 1036.73; stroke-dashoffset: 1036.73;"></circle>
           </svg>
           <svg class="progress-ring mobile" height="248" width="248">
-            <circle id="circle" stroke-width="8" stroke-linecap="round" fill="transparent"
+            <circle stroke-width="8" stroke-linecap="round" fill="transparent"
               r="120" cx="124" cy="124"
               style="stroke-dasharray: 1036.73; stroke-dashoffset: 1036.73;"></circle>
           </svg>
           <section class="stopwatch">
             <h1><span class="minutes"></span>:<span class="seconds"></span></h1>
-            <h3 class="start">start</h3>
+            <h3>start</h3>
           </section>
         </section>
       </main>
@@ -52,11 +52,79 @@
     pomodoro short break long break Font Color Apply-->
     <section class="modal-container">
       <section class="modal">
-        <h2>Settings</h2>
+        <section class="modal-header">
+          <h2>Settings</h2>
+          <img src="./images/icon-close.svg" alt="icon close" class="icon-close">
+        </section>
+        <form>
+          <h4>time ( minutes )</h4>
+          <section class="change-minutes">
+            <section class="input-container">
+            <label for="pomodoro">pomodoro</label>
+            <section class="number">
+              <input type="number" name="pomodoro" min="1" value="25" step="1" required>
+              <img src="./images/icon-arrow-up.svg" alt="icon-arrow-up" class="arrow-up arrow">
+              <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="arrow-down arrow">
+            </section>
+            </section>
+            <section class="input-container">
+              <label for="short-break">short break</label>
+              <section class="number">
+                <input type="number" name="short-break" min="1" value="5" step="1" required>
+                <img src="./images/icon-arrow-up.svg" alt="icon-arrow-up" class="arrow-up arrow">
+                <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="arrow-down arrow">
+              </section>
+            </section>
+            <section class="input-container">
+              <label for="long-break">long break</label>
+              <section class="number">
+                <input type="number" name="long-break" min="1" value="15" step="1" required>
+                <img src="./images/icon-arrow-up.svg" alt="icon-arrow-up" class="arrow-up arrow">
+                <img src="./images/icon-arrow-down.svg" alt="icon-arrow-down" class="arrow-down arrow">
+              </section>
+          </section>
+          </section>
+          <section class="change-font">
+            <h4>font</h4>
+            <section class="radio-container">
+              <label style="font-family: 'Kumbh Sans', sans-serif;" class="active" data-index="0">
+                <input type="radio" name="font" value="kumbh-sans" checked required>
+                Aa
+              </label>
+              <label style="font-family: 'Roboto Slab', serif;" data-index="1">
+                <input type="radio" name="font" value="roboto-slab">
+                Aa
+              </label>
+              <label style="font-family: 'Space Mono', monospace;" data-index="2">
+                <input type="radio" name="font" value="space-mono">
+                Aa
+              </label>
+            </section>
+          </section>
+          <section class="change-color">
+            <h4>color</h4>
+            <section class="radio-container">
+              <label style="background: var(--red);" class="active" data-index="0">
+                <input type="radio" name="color" value="red" checked required>
+                <img src="./images/tick.svg" alt="tick">
+              </label>
+              <label style="background: var(--cyan);" data-index="1">
+                <input type="radio" name="color" value="cyan">
+                <img src="./images/tick.svg" alt="tick">
+              </label>
+              <label style="background: var(--purple);" data-index="2">
+                <input type="radio" name="color" value="purple">
+                <img src="./images/tick.svg" alt="tick">
+              </label>
+            </section>
+          </section>
+          <button>Apply</button>
+        </form>
       </section>
     </section>
-    <script src="./js/modal.js"></script>
     <script src="./js/clock.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/tab.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

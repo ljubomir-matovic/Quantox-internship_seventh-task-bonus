@@ -11,11 +11,14 @@
     --dark: #161932;
     --dark-blue: #1e213f;
     --text-color: rgba(215, 224, 255, 0.6);
+    --family: "Kumbh Sans", sans-serif;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 700;
+    font-family: var(--family);
 }
 /**Desktop > 1000px
 ** 600px < Tablet < 1000px
@@ -29,13 +32,13 @@ body {
 }
 /*Font families*/
 .kumbh-sans {
-    font-family: "Kumbh Sans", sans-serif;
+    --family: "Kumbh Sans", sans-serif;
 }
 .roboto-slab {
-    font-family: "Roboto Slab", serif;
+    --family: "Roboto Slab", serif;
 }
 .space-mono {
-    font-family: "Space Mono", monospace;
+    --family: "Space Mono", monospace;
 }
 /*Color style*/
 .red {
@@ -82,7 +85,8 @@ button {
     color: var(--white);
     border-radius: 26.5px;
     border: none;
-    padding: 20px 46px;
+    width: 140px;
+    height: 53px;
     font-size: 16px;
     font-family: inherit;
 }

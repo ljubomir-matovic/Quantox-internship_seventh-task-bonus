@@ -20,7 +20,7 @@ var modal = function () {
      * @param {*} modal
      * @param {*} selected
      */
-    this.open = (modal, selected = null) => {
+    this.open = (modal) => {
         try {
             modal.style.display = "flex";
         } catch (err) {}
@@ -52,3 +52,6 @@ document
     .querySelector(".settings")
     .addEventListener("click", () => modal.open(modal.target));
 modal.closeOuter(modal.target);
+document
+    .querySelector(".icon-close")
+    .addEventListener("click", () => modal.close(modal.target));
